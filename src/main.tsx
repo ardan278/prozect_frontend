@@ -5,13 +5,16 @@ import App from "./App";
 import NavBar from "./components/navBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/footer";
+import { Container } from "react-bootstrap";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <div className="d-flex flex-column min-vh-100">
       <Router>
         <NavBar />
-        <App />
+        <Container className="flex-grow-1">
+          <App />
+        </Container>
       </Router>
       <Footer />
     </div>
