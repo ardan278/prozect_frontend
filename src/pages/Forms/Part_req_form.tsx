@@ -25,7 +25,7 @@ const getTodayDate = (): string => {
   };
   
 
-export default function Reg_form() {
+export default function Part_form() {
   return (
     <div className="container mx-auto mt-10">
       <h2 className="text-2xl font-semibold mb-4">Part Request Form</h2>
