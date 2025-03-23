@@ -1,38 +1,31 @@
-'use client';
+import { NavLink } from "react-router-dom";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
-import { useState } from 'react';
-
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const NavBar: React.FC = () => {
   return (
-    <nav className="bg-blue-600 text-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          <div className="flex-shrink-0">
-            <a href="/" className="text-xl font-bold">MyApp</a>
-          </div>
-          <div className="hidden md:flex space-x-4">
-            <a href="/" className="hover:text-gray-300">Home</a>
-            <a href="/about" className="hover:text-gray-300">About</a>
-            <a href="/contact" className="hover:text-gray-300">Contact</a>
-          </div>
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
-              {isOpen ? '✖' : '☰'}
-            </button>
-          </div>
-        </div>
-      </div>
-      {isOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2 bg-blue-700">
-          <a href="/" className="block hover:text-gray-300">Home</a>
-          <a href="/about" className="block hover:text-gray-300">About</a>
-          <a href="/contact" className="block hover:text-gray-300">Contact</a>
-        </div>
-      )}
-    </nav>
+    <Navbar bg="dark" variant="dark" expand="lg">
+      <Container>
+        <Navbar.Brand href="/">VTSTechCorp</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={NavLink} to="/" end>
+              Home
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/about">
+              About
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/contact">
+              Contact
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/forms" end>
+              Forms
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default NavBar;
