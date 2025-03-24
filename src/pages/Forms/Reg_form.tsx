@@ -59,11 +59,11 @@ export default function Reg_form() {
 
         {/* Checkboxes */}
         <div className="mb-4 flex items-center">
-          <input type="checkbox" className="mr-2" id="accidents" /><br />
+          <input type="checkbox" className="mr-4 w-8 h-8" id="accidents" /><br />
           <label htmlFor="accidents" className="text-sm text-gray-700">Accidents</label>
         </div>
         <div className="mb-4 flex items-center">
-          <input type="checkbox" className="mr-2" id="incidents" /><br />
+          <input type="checkbox" className="mr-4 w-8 h-8" id="incidents" /><br />
           <label htmlFor="incidents" className="text-sm text-gray-700">Incidents</label>
         </div>
         <div className="mb-4">
@@ -71,7 +71,7 @@ export default function Reg_form() {
           <input type="text" className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" id="claims" />
         </div>
         <div className="mb-4 flex items-center">
-          <input type="checkbox" className="mr-2" id="legalCases" /><br />
+          <input type="checkbox" className="mr-4 w-8 h-8" id="legalCases" /><br />
           <label htmlFor="legalCases" className="text-sm text-gray-700">Legal Cases</label>
         </div>
 
@@ -132,7 +132,7 @@ export default function Reg_form() {
         </div>
         <div className="mb-4">
           <label htmlFor="preferredContact" className="block text-sm font-medium text-gray-700">Preferred Mode of Contact</label><br />
-          <input type="text" className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" id="preferredContact" />
+          <input type="text" className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-indigo-500 " id="preferredContact" />
         </div>
 
         <button type="submit" className="mt-4 py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">Create Contractor Registration</button>

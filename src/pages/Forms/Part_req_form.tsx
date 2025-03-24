@@ -61,7 +61,7 @@ export default function Part_form() {
         <input type="text" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" id="Quantity" />
         </div>
         <div>
-        <label htmlFor="ExpectedDate" className="block text-sm font-medium text-gray-700">Expected Date</label>
+        <label htmlFor="ExpectedDate" className="block text-sm font-medium text-gray-700"></label>
         <DateInput label="Expected Date" id="ExpectedDate" max="2030-12-31" />
         </div>
         {/*<div className="mb-4">

@@ -1,7 +1,7 @@
 export default function Serv_form() {
   return (
     <div className="container mx-auto mt-10">
-      <h2 className="text-2xl font-semibold mb-4">New Service Form</h2>
+      <h2 className="text-4l font-semibold mb-4">New Service Form</h2>
       <b>Elevator/Escalator Details</b>
       <form>
         <div className="mb-4">
