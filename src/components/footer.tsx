@@ -13,10 +13,10 @@ const Footer: React.FC = () => {
             </p>
           </Col>
           <Col md={6} className="text-center text-md-end">
-            <a href="#" className="text-light me-3">
+            <a href="/privacy-policy" className="text-light me-3">
               Privacy Policy
             </a>
-            <a href="#" className="text-light">
+            <a href="/terms-service" className="text-light">
               Terms of Service
             </a>
           </Col>

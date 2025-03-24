@@ -2,15 +2,16 @@ import React from "react";
 
 interface BubbleProps {
   imageUrl: string;
+  size?: number; // Accepts size as a prop
   style?: React.CSSProperties;
 }
 
-const Bubble: React.FC<BubbleProps> = ({ imageUrl, style }) => {
+const Bubble: React.FC<BubbleProps> = ({ imageUrl, size = 100, style }) => {
   return (
     <div
       style={{
-        width: "100px",
-        height: "100px",
+        width: `${size}px`,
+        height: `${size}px`,
         borderRadius: "50%",
         overflow: "hidden",
         display: "flex",

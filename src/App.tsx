@@ -7,6 +7,8 @@ import Reg_form from "./pages/Forms/Reg_form";
 import Inst_form from "./pages/Forms/Inst_form";
 import Part_form from "./pages/Forms/Part_req_form";
 import Serv_form from "./pages/Forms/Serv_form";
+import PrivacyPolicy from "./components/privacyPolicy";
+import TermsOfService from "./components/termsOfService";
 
 const App: React.FC = () => {
   return (
@@ -20,6 +22,8 @@ const App: React.FC = () => {
         <Route path="/forms/installation" element={<Inst_form />}/>
         <Route path="/forms/parts" element={<Part_form />}/>
         <Route path="/forms/service" element={<Serv_form />}/>
+        <Route path="/privacy-policy" element={<PrivacyPolicy />}/>
+        <Route path="/terms-service" element={<TermsOfService />}/>
       </Routes>
     </div>
   );
