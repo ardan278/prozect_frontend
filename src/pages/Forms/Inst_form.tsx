@@ -1,10 +1,10 @@
 export default function Inst_form() {
   return (
-    <div className="min-h-screen w-screen mt-12 mb-4">
-      <h2 className="text-4xl font-bold mb-6">New Installation Form</h2>
+    <div className="container mx-auto mt-10">
+      <h2 className="text-4xl font-bold mb-4">New Installation Form</h2>
       <form>
         {/* Section 1 */}
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="manufacturer"
             className="block text-sm font-medium text-gray-700"
@@ -13,11 +13,11 @@ export default function Inst_form() {
           </label>
           <input
             type="text"
-            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             id="manufacturer"
           />
         </div>
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="unitType"
             className="block text-sm font-medium text-gray-700"
@@ -30,7 +30,7 @@ export default function Inst_form() {
             id="unitType"
           />
         </div>
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="landingDoors"
             className="block text-sm font-medium text-gray-700"
@@ -43,7 +43,7 @@ export default function Inst_form() {
             id="landingDoors"
           />
         </div>
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="cabinDoors"
             className="block text-sm font-medium text-gray-700"
@@ -56,7 +56,7 @@ export default function Inst_form() {
             id="cabinDoors"
           />
         </div>
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="contractType"
             className="block text-sm font-medium text-gray-700"
@@ -69,7 +69,7 @@ export default function Inst_form() {
             id="contractType"
           />
         </div>
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="floors"
             className="block text-sm font-medium text-gray-700"
@@ -82,7 +82,7 @@ export default function Inst_form() {
             id="floors"
           />
         </div>
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="drawings"
             className="block text-sm font-medium text-gray-700"
@@ -96,7 +96,7 @@ export default function Inst_form() {
             accept=".pdf,.dwg"
           />
         </div>
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="widthCabin"
             className="block text-sm font-medium text-gray-700"
@@ -110,7 +110,7 @@ export default function Inst_form() {
             placeholder="e.g., 1500"
           />
         </div>
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="heightCabin"
             className="block text-sm font-medium text-gray-700"
@@ -125,7 +125,7 @@ export default function Inst_form() {
           />
         </div>
 
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="depthCabin"
             className="block text-sm font-medium text-gray-700"
@@ -140,7 +140,7 @@ export default function Inst_form() {
           />
         </div>
 
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="widthShaft"
             className="block text-sm font-medium text-gray-700"
@@ -155,7 +155,7 @@ export default function Inst_form() {
           />
         </div>
 
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="heightShaft"
             className="block text-sm font-medium text-gray-700"
@@ -170,7 +170,7 @@ export default function Inst_form() {
           />
         </div>
 
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="depthShaft"
             className="block text-sm font-medium text-gray-700"
@@ -185,7 +185,7 @@ export default function Inst_form() {
           />
         </div>
 
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="pit"
             className="block text-sm font-medium text-gray-700"
@@ -200,7 +200,7 @@ export default function Inst_form() {
           />
         </div>
 
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="addressInstall"
             className="block text-sm font-medium text-gray-700"
@@ -214,7 +214,7 @@ export default function Inst_form() {
           />
         </div>
 
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="zipCode"
             className="block text-sm font-medium text-gray-700"
@@ -228,7 +228,7 @@ export default function Inst_form() {
           />
         </div>
 
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="state"
             className="block text-sm font-medium text-gray-700"
@@ -242,7 +242,7 @@ export default function Inst_form() {
           />
         </div>
 
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="area"
             className="block text-sm font-medium text-gray-700"
@@ -256,7 +256,7 @@ export default function Inst_form() {
           />
         </div>
 
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="contactNumber"
             className="block text-sm font-medium text-gray-700"
@@ -270,7 +270,7 @@ export default function Inst_form() {
           />
         </div>
 
-        <div className="mb-6">
+        <div className="mb-4">
           <label
             htmlFor="modeContact"
             className="block text-sm font-medium text-gray-700"
