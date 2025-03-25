@@ -1,9 +1,3 @@
-// import Blob from "./Blob";
-// import Bubble from "./Bubble";
-// import heroImage from "../../assets/images/heroImage.jpg";
-{
-  /* https://gb.mitsubishielectric.com/sites/gb_ssl/en/news/releases/global/2020/1207-a/images/img_201207-a.jpg */
-}
 import { Container, Row, Col } from "react-bootstrap";
 import Blog2 from "../../assets/images/peopleHandOver.jpg";
 import Escalator from "../../assets/images/Escalator.png";
@@ -18,7 +12,7 @@ const sections = [
     image: Blog1,
     layout: "left-text",
     bgClass: "bg-light",
-    imageStyle: "w-[75%] h-auto rounded-[25px] mx-auto d-block"
+    imageStyle: "w-[75%] h-auto rounded-[25px] mx-auto d-block",
   },
   {
     title: "Our Vision",
@@ -34,7 +28,8 @@ const sections = [
     image: Blog3,
     layout: "left-text",
     bgClass: "bg-light",
-    imageStyle: "w-[70%] h-[10px] object-cover rounded-[20px] mx-auto d-block shadow-md"
+    imageStyle:
+      "w-[70%] h-[10px] object-cover rounded-[20px] mx-auto d-block shadow-md",
   },
 ];
 
@@ -44,16 +39,15 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <Container
         fluid
-        className="my-5 text-white"
+        className="my-5 text-dark bg-gradient-to-r from-[#A888B5] via-[#E4D2D8] to-[#F2F4F7] shadow-md"
         style={{
-          background: "linear-gradient(to right, #283048, #859398)",
           padding: "100px 0",
         }}
       >
         <Row className="align-items-center text-center">
           <Col md={6} className="p-5 text-md-start">
-            <h1 className="display-4">Welcome to Our Platform</h1>
-            <p className="lead">
+            <h1 className="display-4 text-gray-900">Welcome to Our Platform</h1>
+            <p className="lead text-gray-700">
               We provide high-quality services to help you achieve your goals.
             </p>
           </Col>
@@ -72,9 +66,9 @@ const Home: React.FC = () => {
         <Container
           key={index}
           fluid
-          className={`my-5 py-5 ${section.bgClass} shadow-lg`}
+          className={`my-5 py-5 ${section.bgClass} shadow-lg bg-red-50`}
         >
-          <Row className="align-items-center text-center">
+          <Row className="align-items-center text-center ">
             {section.layout === "right-text" && (
               <Col md={6} className="d-flex justify-content-center">
                 <img

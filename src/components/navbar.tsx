@@ -6,17 +6,17 @@ import SearchBar from "./SearchBar"; // Import the custom SearchBar
 
 const navbar: React.FC = () => {
   return (
-    <Navbar className="w-100 px-3 navbar-light bg-light" expand="lg">
+    <Navbar className="w-100 px-3 navbar-dark bg-dark" expand="lg">
       <Container fluid>
         {/* Move Brand to Far Left */}
         <div className="px-3">
-          <Navbar.Brand href="/" className="me-auto fs-4 text-dark">
+          <Navbar.Brand href="/" className="me-auto fs-4 text-light">
             VTSTechCorp
           </Navbar.Brand>
         </div>
 
         {/* User Login Icon (Always Visible) */}
-        <Nav.Link as={NavLink} to="/admin" className="fs-4 text-dark me-3">
+        <Nav.Link as={NavLink} to="/admin" className="fs-4 text-light me-3">
           <img
             src={image}
             alt="User Icon"
@@ -35,7 +35,7 @@ const navbar: React.FC = () => {
               as={NavLink}
               to="/"
               end
-              className="fs-5 my-2 px-4 py-3 text-dark nav-link-hover"
+              className="fs-5 my-2 px-4 py-3 text-light nav-link-hover"
             >
               Home
             </Nav.Link>
@@ -43,7 +43,7 @@ const navbar: React.FC = () => {
             <Nav.Link
               as={NavLink}
               to="/about"
-              className="fs-5 my-2 px-4 py-3 text-dark nav-link-hover"
+              className="fs-5 my-2 px-4 py-3 text-light nav-link-hover"
             >
               About
             </Nav.Link>
@@ -51,7 +51,7 @@ const navbar: React.FC = () => {
             <Nav.Link
               as={NavLink}
               to="/contact"
-              className="fs-5 my-2 px-4 py-3 text-dark nav-link-hover"
+              className="fs-5 my-2 px-4 py-3 text-light nav-link-hover"
             >
               Contact
             </Nav.Link>
@@ -59,7 +59,7 @@ const navbar: React.FC = () => {
               as={NavLink}
               to="/forms"
               end
-              className="fs-5 my-2 px-4 py-3 text-dark nav-link-hover"
+              className="fs-5 my-2 px-4 py-3 text-light nav-link-hover"
             >
               Forms
             </Nav.Link>
@@ -67,10 +67,35 @@ const navbar: React.FC = () => {
               as={NavLink}
               to="/services"
               end
-              className="fs-5 my-2 px-4 py-3 text-dark nav-link-hover"
+              className="fs-5 my-2 px-4 py-3 text-light nav-link-hover"
             >
               Services
             </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              to="/event-calendar"
+              end
+              className="fs-5 my-2 px-4 py-3 text-light nav-link-hover"
+            >
+              Calendars
+            </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              to="/event-calendar"
+              end
+              className="fs-5 my-2 px-4 py-3 text-light nav-link-hover"
+            >
+              Calendars
+            </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              to="/event-calendar"
+              end
+              className="fs-5 my-2 px-4 py-3 text-light nav-link-hover"
+            >
+              Calendars
+            </Nav.Link>
+            
           </Nav>
 
           {/* Replace Old Search Bar with SearchBar Component */}
