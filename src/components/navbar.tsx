@@ -4,7 +4,7 @@ import image from "../assets/images/3135715.png";
 import "../assets/styles/NavBar.css";
 import SearchBar from "./SearchBar"; // Import the custom SearchBar
 
-const NavBar: React.FC = () => {
+const navbar: React.FC = () => {
   return (
     <Navbar className="w-100 px-3 navbar-light bg-light" expand="lg">
       <Container fluid>
@@ -63,6 +63,14 @@ const NavBar: React.FC = () => {
             >
               Forms
             </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              to="/services"
+              end
+              className="fs-5 my-2 px-4 py-3 text-dark nav-link-hover"
+            >
+              Services
+            </Nav.Link>
           </Nav>
 
           {/* Replace Old Search Bar with SearchBar Component */}
@@ -75,4 +83,4 @@ const NavBar: React.FC = () => {
   );
 };
 
-export default NavBar;
+export default navbar;

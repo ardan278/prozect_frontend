@@ -9,6 +9,8 @@ import Part_form from "./pages/Forms/Part_req_form";
 import Serv_form from "./pages/Forms/Serv_form";
 import PrivacyPolicy from "./components/privacyPolicy";
 import TermsOfService from "./components/termsOfService";
+import Admin from "./pages/Admin/page";
+import Services from "./pages/Services/page";
 
 const App: React.FC = () => {
   return (
@@ -24,6 +26,12 @@ const App: React.FC = () => {
         <Route path="/forms/service" element={<Serv_form />}/>
         <Route path="/privacy-policy" element={<PrivacyPolicy />}/>
         <Route path="/terms-service" element={<TermsOfService />}/>
+        <Route path="/admin" element={<Admin />}/>
+         <Route path="/services/spareParts" element={<Part_form />}/>
+         <Route path="/services/newSales" element={<Inst_form />}/>
+         <Route path="/services/Service" element={<Serv_form />}/>
+         <Route path="/services/Modernization" element={<Inst_form />}/>
+        <Route path="/services" element={<Services />}/>
       </Routes>
     </div>
   );

@@ -9,7 +9,6 @@ import Blog2 from "../../assets/images/peopleHandOver.jpg";
 import Escalator from "../../assets/images/Escalator.png";
 import Blog1 from "../../assets/images/1523699544907.png";
 import Blog3 from "../../assets/images/b3_part.jpg";
-import SearchBar from "../../components/SearchBar";
 
 // Define the section data
 const sections = [
