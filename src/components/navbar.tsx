@@ -1,38 +1,95 @@
-'use client';
+import { NavLink } from "react-router-dom";
+import { Navbar, Nav, Container } from "react-bootstrap";
+import image from "../assets/images/3135715.png";
+import "../assets/styles/NavBar.css";
+import SearchBar from "./SearchBar"; // Import the custom SearchBar
 
-import { useState } from 'react';
-
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const navbar: React.FC = () => {
   return (
-    <nav className="bg-blue-600 text-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          <div className="flex-shrink-0">
-            <a href="/" className="text-xl font-bold">MyApp</a>
-          </div>
-          <div className="hidden md:flex space-x-4">
-            <a href="/" className="hover:text-gray-300">Home</a>
-            <a href="/about" className="hover:text-gray-300">About</a>
-            <a href="/contact" className="hover:text-gray-300">Contact</a>
-          </div>
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
-              {isOpen ? '✖' : '☰'}
-            </button>
-          </div>
+    <Navbar className="w-100 px-3 navbar-dark bg-dark" expand="lg">
+      <Container fluid>
+        {/* Move Brand to Far Left */}
+        <div className="px-3">
+          <Navbar.Brand href="/" className="me-auto fs-4 text-light">
+            VTSTechCorp
+          </Navbar.Brand>
         </div>
-      </div>
-      {isOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2 bg-blue-700">
-          <a href="/" className="block hover:text-gray-300">Home</a>
-          <a href="/about" className="block hover:text-gray-300">About</a>
-          <a href="/contact" className="block hover:text-gray-300">Contact</a>
-        </div>
-      )}
-    </nav>
+
+        {/* User Login Icon (Always Visible) */}
+        <Nav.Link as={NavLink} to="/admin" className="fs-4 text-light me-3">
+          <img
+            src={image}
+            alt="User Icon"
+            width="40"
+            height="40"
+            style={{ borderRadius: "50%" }}
+          />
+        </Nav.Link>
+
+        {/* Navbar Toggle (Sandwich Icon) */}
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mx-auto my-auto">
+            <Nav.Link
+              as={NavLink}
+              to="/"
+              end
+              className="fs-5 my-2 px-4 py-3 text-light nav-link-hover"
+            >
+              Home
+            </Nav.Link>
+
+            <Nav.Link
+              as={NavLink}
+              to="/about"
+              className="fs-5 my-2 px-4 py-3 text-light nav-link-hover"
+            >
+              About
+            </Nav.Link>
+
+            <Nav.Link
+              as={NavLink}
+              to="/contact"
+              className="fs-5 my-2 px-4 py-3 text-light nav-link-hover"
+            >
+              Contact
+            </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              to="/forms"
+              end
+              className="fs-5 my-2 px-4 py-3 text-light nav-link-hover"
+            >
+              Forms
+            </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              to="/services"
+              end
+              className="fs-5 my-2 px-4 py-3 text-light nav-link-hover"
+            >
+              Services
+            </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              to="/event-calendar"
+              end
+              className="fs-5 my-2 px-4 py-3 text-light nav-link-hover"
+            >
+              Calendars
+            </Nav.Link>
+            
+          </Nav>
+
+          {/* Replace Old Search Bar with SearchBar Component */}
+          <div className="search-bar-container ms-auto">
+            <SearchBar />
+          </div>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default navbar;
