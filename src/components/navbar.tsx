@@ -1,33 +1,74 @@
 import { NavLink } from "react-router-dom";
-import { Navbar, Nav, Container, Form, FormControl, Button } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
+import image from "../assets/images/3135715.png";
+import "../assets/styles/NavBar.css";
+import SearchBar from "./SearchBar"; // Import the custom SearchBar
 
 const NavBar: React.FC = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="w-100 px-3">
+    <Navbar className="w-100 px-3 navbar-light bg-light" expand="lg">
       <Container fluid>
         {/* Move Brand to Far Left */}
-        <Navbar.Brand href="/" className="me-auto fs-4">VTSTechCorp</Navbar.Brand>
+        <div className="px-3">
+          <Navbar.Brand href="/" className="me-auto fs-4 text-dark">
+            VTSTechCorp
+          </Navbar.Brand>
+        </div>
+
+        {/* User Login Icon (Always Visible) */}
+        <Nav.Link as={NavLink} to="/admin" className="fs-4 text-dark me-3">
+          <img
+            src={image}
+            alt="User Icon"
+            width="40"
+            height="40"
+            style={{ borderRadius: "50%" }}
+          />
+        </Nav.Link>
+
+        {/* Navbar Toggle (Sandwich Icon) */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto">
-            <Nav.Link as={NavLink} to="/" end className="fs-5 py-2 px-4">
+          <Nav className="mx-auto my-auto">
+            <Nav.Link
+              as={NavLink}
+              to="/"
+              end
+              className="fs-5 my-2 px-4 py-3 text-dark nav-link-hover"
+            >
               Home
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/about" className="fs-5 py-2 px-4">
+
+            <Nav.Link
+              as={NavLink}
+              to="/about"
+              className="fs-5 my-2 px-4 py-3 text-dark nav-link-hover"
+            >
               About
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/contact" className="fs-5 py-2 px-4">
+
+            <Nav.Link
+              as={NavLink}
+              to="/contact"
+              className="fs-5 my-2 px-4 py-3 text-dark nav-link-hover"
+            >
               Contact
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/forms" end className="fs-5 py-2 px-4">
+            <Nav.Link
+              as={NavLink}
+              to="/forms"
+              end
+              className="fs-5 my-2 px-4 py-3 text-dark nav-link-hover"
+            >
               Forms
             </Nav.Link>
           </Nav>
-          {/* Search Bar Stays on the Right */}
-          <Form className="d-flex ms-auto">
-            <FormControl type="search" placeholder="Search" className="me-2" style={{ height: "45px", fontSize: "1.2rem" }} />
-            <Button variant="outline-light" className="btn-lg px-4">Search</Button>
-          </Form>
+
+          {/* Replace Old Search Bar with SearchBar Component */}
+          <div className="search-bar-container ms-auto">
+            <SearchBar />
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

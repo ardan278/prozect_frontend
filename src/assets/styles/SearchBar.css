@@ -1,0 +1,55 @@
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 350px; /* Adjust width */
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 5px;
+  width: 100%;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  font-size: 1.2rem;
+  padding: 8px;
+  outline: none;
+}
+
+/* Auto-Complete Styling */
+.autocomplete {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.autocomplete-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.autocomplete-item:hover,
+.autocomplete-item.selected {
+  background-color: #f0f0f0;
+}
+
+.search-icon {
+  margin-left: 10px;
+  color: gray;
+  cursor: pointer;
+}

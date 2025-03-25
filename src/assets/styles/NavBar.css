@@ -1,0 +1,33 @@
+.nav-link-hover {
+  color: white !important;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.nav-link-hover:hover {
+  background-color: rgba(93, 85, 85, 0.364);
+  border-radius: 5px;
+}
+
+.navbar-custom {
+  background-color: #212529 !important; /* Change to the selected color */
+}
+
+.navbar-custom .nav-link {
+  color: white !important;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #17a2b8 !important; /* Adjust hover color */
+}
+
+.navbar-light {
+  background-color: #f8f9fa !important; /* Light theme */
+}
+
+.nav-link-hover {
+  color: #333 !important;
+}
+
+.nav-link-hover:hover {
+  color: #007bff !important; /* Bootstrap primary color */
+}
