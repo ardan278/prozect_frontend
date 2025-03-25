@@ -79,22 +79,6 @@ const navbar: React.FC = () => {
             >
               Calendars
             </Nav.Link>
-            <Nav.Link
-              as={NavLink}
-              to="/event-calendar"
-              end
-              className="fs-5 my-2 px-4 py-3 text-light nav-link-hover"
-            >
-              Calendars
-            </Nav.Link>
-            <Nav.Link
-              as={NavLink}
-              to="/event-calendar"
-              end
-              className="fs-5 my-2 px-4 py-3 text-light nav-link-hover"
-            >
-              Calendars
-            </Nav.Link>
             
           </Nav>
 
