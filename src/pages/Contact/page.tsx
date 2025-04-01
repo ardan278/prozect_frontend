@@ -25,7 +25,7 @@ const ContactUs: React.FC = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "https://bright-ewe-inherently.ngrok-free.appapi/send-email/",
+        "https://bright-ewe-inherently.ngrok-free.app/api/send-email/",
         {
           email: formData.email,
           subject: formData.query,

@@ -16,7 +16,7 @@ const SearchBar: React.FC = () => {
     }
     try {
       const response = await axios.get<string[]>(
-        `https://bright-ewe-inherently.ngrok-free.appapi/search?q=${searchTerm}`
+        `https://bright-ewe-inherently.ngrok-free.app/api/search?q=${searchTerm}`
       );
       console.log("Response Data:", response.data);
       setResults(response.data);

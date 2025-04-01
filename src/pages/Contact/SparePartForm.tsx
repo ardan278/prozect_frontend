@@ -40,7 +40,7 @@ const SparePartForm = () => {
 
     try {
       const response = await fetch(
-        "https://bright-ewe-inherently.ngrok-free.appapi/ocr/",
+        "https://bright-ewe-inherently.ngrok-free.app/api/ocr/",
         {
           method: "POST",
           body: formData,
@@ -79,7 +79,7 @@ const SparePartForm = () => {
 
     try {
       const response = await fetch(
-        "https://bright-ewe-inherently.ngrok-free.appapi/ack/",
+        "https://bright-ewe-inherently.ngrok-free.app/api/ack/",
         {
           method: "POST",
           body: formDataObj,
