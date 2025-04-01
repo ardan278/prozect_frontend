@@ -9,7 +9,7 @@ import { Container } from "react-bootstrap";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <div className="d-flex flex-column min-vh-100 bg-[#8174A0]">
+    <div className="d-flex flex-column min-vh-100 bg-[#ADB2D4]">
       <Router>
         <NavBar />
         <Container className="flex-grow-1">

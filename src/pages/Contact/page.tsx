@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Form, Button, Container, Row, Col, Alert } from "react-bootstrap";
 import Confetti from "react-confetti";
+import axios from "axios";
+import SparePartForm from "./SparePartForm";
 
 const ContactUs: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -19,10 +21,22 @@ const ContactUs: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    console.log("Form submitted:", formData);
+    try {
+      await axios.post(
+        "https://bright-ewe-inherently.ngrok-free.appapi/send-email/",
+        {
+          email: formData.email,
+          subject: formData.query,
+          message: `Hello ${formData.name}, we have received your query: ${formData.query}`,
+        }
+      );
+      alert("Email sent successfully!");
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Failed to send email.");
+    }
     setFormData({ name: "", email: "", business: "", query: "" });
   };
 
@@ -116,4 +130,4 @@ const ContactUs: React.FC = () => {
   );
 };
 
-export default ContactUs;
+export default SparePartForm;

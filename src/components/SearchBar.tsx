@@ -15,7 +15,10 @@ const SearchBar: React.FC = () => {
       return;
     }
     try {
-      const response = await axios.get<string[]>(`http://localhost:5000/search?q=${searchTerm}`);
+      const response = await axios.get<string[]>(
+        `https://bright-ewe-inherently.ngrok-free.appapi/search?q=${searchTerm}`
+      );
+      console.log("Response Data:", response.data);
       setResults(response.data);
     } catch (error) {
       console.error("Error fetching search results:", error);
@@ -57,7 +60,9 @@ const SearchBar: React.FC = () => {
             {results.map((item, index) => (
               <div
                 key={index}
-                className={`autocomplete-item ${index === selectedIndex ? "selected" : ""}`}
+                className={`autocomplete-item ${
+                  index === selectedIndex ? "selected" : ""
+                }`}
                 onMouseDown={() => setQuery(item)}
               >
                 {item}
