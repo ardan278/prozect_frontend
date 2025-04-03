@@ -5,7 +5,7 @@ import Contact from "./pages/Contact/page";
 import Forms from "./pages/Forms/page";
 import Reg_form from "./pages/Forms/Reg_form";
 import Inst_form from "./pages/Forms/Inst_form";
-import Part_form from "./pages/Forms/Part_req_form";
+import SparePartForm from "./pages/Forms/SparePartForm";
 import Serv_form from "./pages/Forms/Serv_form";
 import PrivacyPolicy from "./components/privacyPolicy";
 import TermsOfService from "./components/termsOfService";
@@ -23,12 +23,12 @@ const App: React.FC = () => {
         <Route path="/forms" element={<Forms />} />
         <Route path="/forms/registration" element={<Reg_form />} />
         <Route path="/forms/installation" element={<Inst_form />} />
-        <Route path="/forms/parts" element={<Part_form />} />
+        <Route path="/forms/parts" element={<SparePartForm />} />
         <Route path="/forms/service" element={<Serv_form />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-service" element={<TermsOfService />} />
         <Route path="/admin" element={<Admin />} />
-        <Route path="/services/spareParts" element={<Part_form />} />
+        <Route path="/services/spareParts" element={<SparePartForm />} />
         <Route path="/services/newSales" element={<Inst_form />} />
         <Route path="/services/Service" element={<Serv_form />} />
         <Route path="/services/Modernization" element={<Inst_form />} />

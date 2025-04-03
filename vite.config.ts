@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     host: true,
-    allowedHosts: ["bright-ewe-inherently.ngrok-free.app"],
+    allowedHosts: ["bright-ewe-inherently.ngrok-free.app", "http://localhost"],
   },
 });
