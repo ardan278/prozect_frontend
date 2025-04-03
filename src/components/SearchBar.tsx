@@ -10,13 +10,9 @@ const SearchBar: React.FC = () => {
 
   // Fetch search results with debounce
   const fetchResults = async (searchTerm: string) => {
-    if (searchTerm.length < 2) {
-      setResults([]);
-      return;
-    }
     try {
       const response = await axios.get<string[]>(
-        `https://bright-ewe-inherently.ngrok-free.app/api/search?q=${searchTerm}`
+        `BACKEND-CONNECT/search/fuzz?q=${searchTerm}`
       );
       console.log("Response Data:", response.data);
       setResults(response.data);
@@ -28,6 +24,7 @@ const SearchBar: React.FC = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
+    if (value === "") setResults([]);
     fetchResults(value);
     setSelectedIndex(-1); // Reset selection when typing
   };
@@ -38,8 +35,8 @@ const SearchBar: React.FC = () => {
     } else if (e.key === "ArrowUp" && selectedIndex > 0) {
       setSelectedIndex(selectedIndex - 1);
     } else if (e.key === "Enter" && selectedIndex >= 0) {
-      setQuery(results[selectedIndex]); // Set input to selected result
-      setResults([]); // Hide dropdown after selection
+      setQuery(results[selectedIndex]);
+      setResults([]);
     }
   };
 
