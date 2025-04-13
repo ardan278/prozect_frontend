@@ -12,7 +12,7 @@ const SearchBar: React.FC = () => {
   const fetchResults = async (searchTerm: string) => {
     try {
       const response = await axios.get<string[]>(
-        `BACKEND-CONNECT/search/fuzz?q=${searchTerm}`
+        `http://127.0.0.1:8000/search/fuzz?q=${searchTerm}`
       );
       console.log("Response Data:", response.data);
       setResults(response.data);

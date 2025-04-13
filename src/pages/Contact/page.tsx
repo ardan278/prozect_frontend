@@ -23,7 +23,7 @@ const ContactUs: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await axios.post("BACKEND-CONNECT/api/send-email/", {
+      await axios.post("http://127.0.0.1:8000/api/send-email/", {
         email: formData.email,
         subject: formData.query,
         message: `Hello ${formData.name}, we have received your query: ${formData.query}`,

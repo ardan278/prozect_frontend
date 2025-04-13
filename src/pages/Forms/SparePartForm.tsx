@@ -7,7 +7,7 @@ const SparePartForm = () => {
     quantity: "1",
     manufacturer: "",
     country: "",
-    email: ""
+    email: "",
   });
 
   const [image, setImage] = useState<File | null>(null);
@@ -39,7 +39,7 @@ const SparePartForm = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("BACKEND-CONNECT/search/ocr/", {
+      const response = await fetch("http://127.0.0.1:8000/search/ocr/", {
         method: "POST",
         body: formDataObj,
       });
@@ -51,7 +51,7 @@ const SparePartForm = () => {
         quantity: data.data.quantity || 1,
         manufacturer: data.data.manufacturer || "",
         country: data.data.country || "",
-        email: formData.email
+        email: formData.email,
       });
     } catch (error) {
       console.error("OCR request failed:", error);
@@ -65,7 +65,7 @@ const SparePartForm = () => {
     const formDataObj = new FormData();
 
     if (image) {
-      formDataObj.append("image", image); 
+      formDataObj.append("image", image);
     }
     formDataObj.append("partNumber", formData.partNumber);
     formDataObj.append("description", formData.description);
@@ -75,7 +75,7 @@ const SparePartForm = () => {
     formDataObj.append("email", formData.email);
 
     try {
-      const response = await fetch("BACKEND-CONNECT/api/ack/", {
+      const response = await fetch("http://127.0.0.1:8000/api/ack/", {
         method: "POST",
         body: formDataObj,
       });
@@ -103,7 +103,7 @@ const SparePartForm = () => {
         >
           {/* Left Column */}
           <div className="md:col-span-2 space-y-4">
-          <div>
+            <div>
               <label className="block text-sm font-medium">Email</label>
               <input
                 type="text"
